@@ -19,7 +19,7 @@ install:
   - cd $GOPATH/src/github.com/yangwenmai/how-to-add-badge-in-readme
 
 script:
-    - overalls -project=github.com/yangwenmai/hot-to-add-badge-in-readme -covermode=count -ignore='.git,_vendor'
+    - overalls -project=github.com/yangwenmai/how-to-add-badge-in-readme -covermode=count -ignore='.git,_vendor'
     - goveralls -coverprofile=overalls.coverprofile -service=travis-ci -repotoken $COVERALLS_TOKEN
     - go test ./...
 

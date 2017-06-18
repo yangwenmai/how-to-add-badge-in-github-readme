@@ -1,4 +1,4 @@
-# 如何在 README 里面添加徽章（Travis-CI & GoReportCard & Coveralls ...）
+# 如何在 README 里面添加徽章（Travis-CI & GoReportCard & Coveralls ...） [![Go Report Card](https://goreportcard.com/badge/github.com/yangwenmai/how-to-add-badge-in-readme)](https://goreportcard.com/report/github.com/yangwenmai/how-to-add-badge-in-readme)
 
 作为一个 Golang 开发者，应该都知道 TiDB 吧，如果你不知道，那我只能说赶紧去了解了解吧。
 
