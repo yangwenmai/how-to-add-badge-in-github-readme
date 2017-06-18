@@ -157,6 +157,6 @@ coveralls复制图标标签
 2. https://github.com/nukc/how-to-use-travis-ci
 3. https://www.jerrylou.me/工具/howto-github-travisci-coveralls-20170120.html
 
-# 赞助
+# 赞助我
 
 ![微信支付](./docs/wxpay.png)
