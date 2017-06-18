@@ -122,7 +122,7 @@ repo_token涉及安全不应该提交到`.travis.yml`，coveralls提供了非对
 - 对密码等敏感信息进行加密，然后再构建环境时解密。
 - 在Travis CI控制台设置环境变量，然后使用System.getenv()获取值。
 
-![配置环境变量](./docs/travis-ci-env-params-setting)
+![配置环境变量](./docs/travis-ci-env-params-setting.png)
 
 对于文件加密，Travis CI提供了一个基于ruby的CLI命令行工具，可以直接使用gem安装：
 
