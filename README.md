@@ -1,4 +1,4 @@
-# 如何在 README 里面添加徽章 （Travis-CI & GoReportCard & Coveralls ...）[![Build Status](https://travis-ci.org/yangwenmai/how-to-add-badge-in-readme.svg?branch=master)](https://travis-ci.org/yangwenmai/how-to-add-badge-in-readme) [![Go Report Card](https://goreportcard.com/badge/github.com/yangwenmai/how-to-add-badge-in-readme)](https://goreportcard.com/report/github.com/yangwenmai/how-to-add-badge-in-readme)  [![Documentation](https://godoc.org/github.com/yangwenmai/how-to-add-badge-in-readme?status.svg)](http://godoc.org/github.com/yangwenmai/how-to-add-badge-in-readme) [![Coverage Status](https://coveralls.io/repos/github/yangwenmai/how-to-add-badge-in-readme/badge.svg?branch=master)](https://coveralls.io/github/yangwenmai/how-to-add-badge-in-readme?branch=master)
+# 如何在 README 里面添加徽章 （Travis-CI & GoReportCard & Coveralls ...）[![Build Status](https://travis-ci.org/yangwenmai/how-to-add-badge-in-github-readme.svg?branch=master)](https://travis-ci.org/yangwenmai/how-to-add-badge-in-github-readme) [![Go Report Card](https://goreportcard.com/badge/github.com/yangwenmai/how-to-add-badge-in-github-readme)](https://goreportcard.com/report/github.com/yangwenmai/how-to-add-badge-in-github-readme)  [![Documentation](https://godoc.org/github.com/yangwenmai/how-to-add-badge-in-github-readme?status.svg)](http://godoc.org/github.com/yangwenmai/how-to-add-badge-in-github-readme) [![Coverage Status](https://coveralls.io/repos/github/yangwenmai/how-to-add-badge-in-github-readme/badge.svg?branch=master)](https://coveralls.io/github/yangwenmai/how-to-add-badge-in-github-readme?branch=master)
 
 作为一个 Golang 开发者，应该都知道 TiDB 吧，如果你不知道，那我只能说赶紧去了解了解吧。
 
@@ -12,7 +12,7 @@
 
 我今天就是来告诉大家怎么做的，希望能帮助到你。
 
-徽章在 Github 上配置起来非常简单，但是有可能你是基于 Gitlab 的私有仓库，那这篇文章可能会对你有帮助。
+徽章在 Github 上配置起来非常简单，但是有可能你是基于 Gitlab 的私有仓库，那[这篇文章](./doc/how_to_use_gitlab_ci.md)可能会对你有帮助。
 
 废话不多说，我先来简单介绍一下这3个徽章是什么。
 
@@ -50,7 +50,7 @@
 1. 在 travis-ci 你的 profile 页面，勾选上你要持续集成的项目
 2. 在你的 Github 项目根目录下添加`.travis.yml`，Travis-CI会按照`.travis.yml`里的内容进行构建
 3. 提交`.travis.yml`到 Github，自动触发持续集成，
-4. 你可以到[travis-ci-status](https://travis-ci.org/yangwenmai/how-to-add-badge-in-readme) 查看结果
+4. 你可以到[travis-ci-status](https://travis-ci.org/yangwenmai/how-to-add-badge-in-github-readme) 查看结果
 
 下面给一个我的`.travis.yml`例子:
 ```yml
@@ -72,10 +72,10 @@ install:#依赖安装
   - go get github.com/mattn/goveralls #goveralls是coveralls对golang的测试覆盖率支持命令
   - go get github.com/smartystreets/goconvey#很好用的测试工具
   - mkdir -p $GOPATH/src/github.com/yangwenmai
-  - cd $GOPATH/src/github.com/yangwenmai/how-to-add-badge-in-readme
+  - cd $GOPATH/src/github.com/yangwenmai/how-to-add-badge-in-github-readme
 
 script:# 集成脚本
-    - overalls -project=github.com/yangwenmai/how-to-add-badge-in-readme -covermode=count -ignore='.git,_vendor'
+    - overalls -project=github.com/yangwenmai/how-to-add-badge-in-github-readme -covermode=count -ignore='.git,_vendor'
     - goveralls -coverprofile=overalls.coverprofile -service=travis-ci -repotoken $COVERALLS_TOKEN
     - go test ./...
 

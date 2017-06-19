@@ -16,10 +16,10 @@ install:
   - go get github.com/mattn/goveralls
   - go get github.com/smartystreets/goconvey
   - mkdir -p $GOPATH/src/github.com/yangwenmai
-  - cd $GOPATH/src/github.com/yangwenmai/how-to-add-badge-in-readme
+  - cd $GOPATH/src/github.com/yangwenmai/how-to-add-badge-in-github-readme
 
 script:
-    - overalls -project=github.com/yangwenmai/how-to-add-badge-in-readme -covermode=count -ignore='.git,_vendor'
+    - overalls -project=github.com/yangwenmai/how-to-add-badge-in-github-readme -covermode=count -ignore='.git,_vendor'
     - goveralls -coverprofile=overalls.coverprofile -service=travis-ci -repotoken $COVERALLS_TOKEN
     - go test ./...
 
