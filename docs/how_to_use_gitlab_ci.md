@@ -1,4 +1,3 @@
-
 ## gitlab-ci 配置说明
 
 1. 在项目根目录下创建一个 `.gitlab-ci.yml`文件，详细内容见下文源码。
@@ -15,7 +14,7 @@
 1. 有可能你的项目没有 Pipelines，也没有 Runners，所以我们需要打开 builds。(怎么打开呢？点击Edit Project，然后在`Feature Visibility`中找到 builds，改变权限，然后点击保存。)
 2. 这个选项是需要你上一步选择之后，才会出来：Only allow merge requests to be merged if the build succeeds。(Builds need to be configured to enable this feature.)
 
-![mr](./doc/merge_when_build_succeeds_only_if_succeeds_settings.png)
+![mr](./merge_when_build_succeeds_only_if_succeeds_settings.png)
 
 所以，我们应该把这个选项都全部勾选上，用于要求被Merge的代码一定是通过  build 的。
 
@@ -58,3 +57,5 @@ test-project:
 ```
 
 希望以上配置能够给你帮助。
+
+注：Gitlab 是从 8.0 以上才支持 Gitlab-ci 。
