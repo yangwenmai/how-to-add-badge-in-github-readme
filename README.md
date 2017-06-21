@@ -1,4 +1,4 @@
-# 如何在 README 里面添加徽章 （Travis-CI & GoReportCard & Coveralls ...）[![Build Status](https://travis-ci.org/yangwenmai/how-to-add-badge-in-github-readme.svg?branch=master)](https://travis-ci.org/yangwenmai/how-to-add-badge-in-github-readme) [![Go Report Card](https://goreportcard.com/badge/github.com/yangwenmai/how-to-add-badge-in-github-readme)](https://goreportcard.com/report/github.com/yangwenmai/how-to-add-badge-in-github-readme)  [![Documentation](https://godoc.org/github.com/yangwenmai/how-to-add-badge-in-github-readme?status.svg)](http://godoc.org/github.com/yangwenmai/how-to-add-badge-in-github-readme) [![Coverage Status](https://coveralls.io/repos/github/yangwenmai/how-to-add-badge-in-github-readme/badge.svg?branch=master)](https://coveralls.io/github/yangwenmai/how-to-add-badge-in-github-readme?branch=master)
+# 如何在 README 里面添加徽章 （Travis-CI & GoReportCard & Coveralls ...）[![Build Status](https://travis-ci.org/yangwenmai/how-to-add-badge-in-github-readme.svg?branch=master)](https://travis-ci.org/yangwenmai/how-to-add-badge-in-github-readme) [![Go Report Card](https://goreportcard.com/badge/github.com/yangwenmai/how-to-add-badge-in-github-readme)](https://goreportcard.com/report/github.com/yangwenmai/how-to-add-badge-in-github-readme)  [![Documentation](https://godoc.org/github.com/yangwenmai/how-to-add-badge-in-github-readme?status.svg)](http://godoc.org/github.com/yangwenmai/how-to-add-badge-in-github-readme) [![Coverage Status](https://coveralls.io/repos/github/yangwenmai/how-to-add-badge-in-github-readme/badge.svg?branch=master)](https://coveralls.io/github/yangwenmai/how-to-add-badge-in-github-readme?branch=master) [![GitHub issues](https://img.shields.io/github/issues/yangwenmai/how-to-add-badge-in-github-readme.svg)](https://github.com/yangwenmai/how-to-add-badge-in-github-readme/issues) [![license](https://img.shields.io/github/license/yangwenmai/how-to-add-badge-in-github-readme.svg?maxAge=2592000)](https://github.com/yangwenmai/how-to-add-badge-in-github-readme/LICENSE) [![Release](https://img.shields.io/github/release/yangwenmai/how-to-add-badge-in-github-readme.svg?label=Release)](https://github.com/yangwenmai/how-to-add-badge-in-github-readme/releases)
 
 作为一个 Golang 开发者，应该都知道 TiDB 吧，如果你不知道，那我只能说赶紧去了解了解吧。
 
@@ -7,6 +7,7 @@
 [![Build Status](https://travis-ci.org/pingcap/tidb.svg?branch=master)](https://travis-ci.org/pingcap/tidb)
 [![Go Report Card](https://goreportcard.com/badge/github.com/pingcap/tidb)](https://goreportcard.com/report/github.com/pingcap/tidb)
 [![Coverage Status](https://coveralls.io/repos/github/pingcap/tidb/badge.svg?branch=master)](https://coveralls.io/github/pingcap/tidb?branch=master)
+
 
 你是不是也很想在你的 Github 项目上也加上呢？你会觉得难吗？
 
