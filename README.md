@@ -20,6 +20,11 @@
 
 废话不多说，我先来简单介绍一下这3个徽章是什么。
 
+## Stargazers over time
+
+[![Stargazers over time](https://starcharts.herokuapp.com/yangwenmai/how-to-add-badge-in-github-readme.svg)](https://starcharts.herokuapp.com/yangwenmai/how-to-add-badge-in-github-readme)
+
+
 ## Travis-CI 是什么？
 
 [Travis-CI](https://travis-ci.org) 是国外的开源持续集成构建项目，支持 Github 项目，通过 yml 配置来驱动执行相对应的持续集成脚本。对于 Github 的项目支持起来非常简单，开通 Travis 后只需要你在自己的项目根目录下增加`.travis.yml`就好了。
