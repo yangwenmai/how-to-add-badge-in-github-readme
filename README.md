@@ -86,7 +86,11 @@ install:#依赖安装
 script:# 集成脚本
     - overalls -project=github.com/yangwenmai/how-to-add-badge-in-github-readme -covermode=count -ignore='.git,_vendor'
     - goveralls -coverprofile=overalls.coverprofile -service=travis-ci -repotoken $COVERALLS_TOKEN
+    - go test -race -coverprofile=coverage.txt -covermode=atomic
     - go test ./...
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
 
 env:#env环境变量设置，travis提供的repo_token安全方式
   global:
@@ -148,6 +152,32 @@ repo_token涉及安全不应该提交到`.travis.yml`，coveralls提供了非对
 
 将得到的值填写到`.travis.yml`的 secure 中即可。
 
+# 添加 Codecov
+
+[Codecov](http://codecov.io/) 的作用功效：
+
+**加强开发工作流程，提高代码质量**。
+
+- 一行脚本即可上传报告，非常简单。
+
+  在 `.travis.yml` 中增加如下代码即可。
+
+```yaml
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
+```
+
+- 报告合并，完美无缺。
+- 审核报告，无缝连接。
+- 从现在开始覆盖你的代码，免费。
+- 全世界有上百万开发者用 Codecov 覆盖他们的代码。
+
+以下是一些截图，大家可以看看
+
+![codecov](./docs/codecov-01.png)
+![codecov](./docs/codecov-02.png)
+![codecov](./docs/codecov-03.png)
+
 ## 最后:如何在自己的项目中显示Status Image?
 
 操作起来很简单，只需要在你的 README.md 中增加 badge 链接即可。
@@ -168,4 +198,4 @@ coveralls复制图标标签
 
 # 赞助我
 
-![微信支付](./docs/wxpay.png)
+![微信支付](./docs/wxpay.jpg)
