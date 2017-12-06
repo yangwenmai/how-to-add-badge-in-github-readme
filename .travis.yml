@@ -21,7 +21,11 @@ install:
 script:
     - overalls -project=github.com/yangwenmai/how-to-add-badge-in-github-readme -covermode=count -ignore='.git,_vendor'
     - goveralls -coverprofile=overalls.coverprofile -service=travis-ci -repotoken $COVERALLS_TOKEN
+    - go test -race -coverprofile=coverage.txt -covermode=atomic
     - go test ./...
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
 
 env:
   global:
