@@ -1,5 +1,11 @@
 # 如何在 README 里面添加徽章 （Travis-CI & GoReportCard & Coveralls ...）
-[![Build Status](https://travis-ci.org/yangwenmai/how-to-add-badge-in-github-readme.svg?branch=master)](https://travis-ci.org/yangwenmai/how-to-add-badge-in-github-readme) [![Go Report Card](https://goreportcard.com/badge/github.com/yangwenmai/how-to-add-badge-in-github-readme)](https://goreportcard.com/report/github.com/yangwenmai/how-to-add-badge-in-github-readme)  [![Documentation](https://godoc.org/github.com/yangwenmai/how-to-add-badge-in-github-readme?status.svg)](http://godoc.org/github.com/yangwenmai/how-to-add-badge-in-github-readme) [![Coverage Status](https://coveralls.io/repos/github/yangwenmai/how-to-add-badge-in-github-readme/badge.svg?branch=master)](https://coveralls.io/github/yangwenmai/how-to-add-badge-in-github-readme?branch=master) [![GitHub issues](https://img.shields.io/github/issues/yangwenmai/how-to-add-badge-in-github-readme.svg)](https://github.com/yangwenmai/how-to-add-badge-in-github-readme/issues) [![license](https://img.shields.io/github/license/yangwenmai/how-to-add-badge-in-github-readme.svg?maxAge=2592000)](https://github.com/yangwenmai/how-to-add-badge-in-github-readme/LICENSE) [![Release](https://img.shields.io/github/release/yangwenmai/how-to-add-badge-in-github-readme.svg?label=Release)](https://github.com/yangwenmai/how-to-add-badge-in-github-readme/releases)
+[![Build Status](https://travis-ci.org/yangwenmai/how-to-add-badge-in-github-readme.svg?branch=master)](https://travis-ci.org/yangwenmai/how-to-add-badge-in-github-readme)
+[![Go Report Card](https://goreportcard.com/badge/github.com/yangwenmai/how-to-add-badge-in-github-readme)](https://goreportcard.com/report/github.com/yangwenmai/how-to-add-badge-in-github-readme)
+[![Documentation](https://godoc.org/github.com/yangwenmai/how-to-add-badge-in-github-readme?status.svg)](http://godoc.org/github.com/yangwenmai/how-to-add-badge-in-github-readme)
+[![Coverage Status](https://coveralls.io/repos/github/yangwenmai/how-to-add-badge-in-github-readme/badge.svg?branch=master)](https://coveralls.io/github/yangwenmai/how-to-add-badge-in-github-readme?branch=master)
+[![GitHub issues](https://img.shields.io/github/issues/yangwenmai/how-to-add-badge-in-github-readme.svg)](https://github.com/yangwenmai/how-to-add-badge-in-github-readme/issues)
+[![license](https://img.shields.io/github/license/yangwenmai/how-to-add-badge-in-github-readme.svg?maxAge=2592000)](https://github.com/yangwenmai/how-to-add-badge-in-github-readme/LICENSE)
+[![Release](https://img.shields.io/github/release/yangwenmai/how-to-add-badge-in-github-readme.svg?label=Release)](https://github.com/yangwenmai/how-to-add-badge-in-github-readme/releases)
 
 作为一个 Golang 开发者，应该都知道 TiDB 吧，如果你不知道，那我只能说赶紧去了解了解吧。
 
@@ -78,14 +84,14 @@ notifications: # 每次构建的时候是否通知，如果不想收到通知，
 go:
   - 1.9.2
 
-install:#依赖安装
+install: #依赖安装
   - go get github.com/go-playground/overalls #overalls能够支持到各级子目录
   - go get github.com/mattn/goveralls #goveralls是coveralls对golang的测试覆盖率支持命令
   - go get github.com/smartystreets/goconvey#很好用的测试工具
   - mkdir -p $GOPATH/src/github.com/yangwenmai
   - cd $GOPATH/src/github.com/yangwenmai/how-to-add-badge-in-github-readme
 
-script:# 集成脚本
+script: # 集成脚本
     - overalls -project=github.com/yangwenmai/how-to-add-badge-in-github-readme -covermode=count -ignore='.git,_vendor'
     - goveralls -coverprofile=overalls.coverprofile -service=travis-ci -repotoken $COVERALLS_TOKEN
     - go test -race -coverprofile=coverage.txt -covermode=atomic # 注意要添加这一行，否则不会出现 codecov bot
@@ -94,7 +100,7 @@ script:# 集成脚本
 after_success:
   - bash <(curl -s https://codecov.io/bash)
 
-env:#env环境变量设置，travis提供的repo_token安全方式
+env: #env环境变量设置，travis提供的repo_token安全方式
   global:
     secure: "xxxx"
 ```
